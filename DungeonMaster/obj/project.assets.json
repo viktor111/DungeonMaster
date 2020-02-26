@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\c#\\DungeonMaster\\DungeonMaster\\DungeonMaster.csproj",
+      "projectUniqueName": "Z:\\DungeonMaster\\DungeonMaster\\DungeonMaster.csproj",
       "projectName": "DungeonMaster",
-      "projectPath": "C:\\c#\\DungeonMaster\\DungeonMaster\\DungeonMaster.csproj",
+      "projectPath": "Z:\\DungeonMaster\\DungeonMaster\\DungeonMaster.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\c#\\DungeonMaster\\DungeonMaster\\obj\\",
+      "outputPath": "Z:\\DungeonMaster\\DungeonMaster\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

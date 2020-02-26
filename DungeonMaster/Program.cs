@@ -6,7 +6,8 @@ namespace DungeonMaster
     {
         static void Main(string[] args)
         {
-            Console.Write("Your name: ");
+            Console.Write("Your name: ");     
+
             string name = Console.ReadLine();
 
             Player player = new Player(name, 100, 1, 0);
@@ -15,7 +16,7 @@ namespace DungeonMaster
             bool gameLoop = true;
 
             while (gameLoop)
-            {
+            {               
                 string command = Console.ReadLine();
 
                 switch (command)

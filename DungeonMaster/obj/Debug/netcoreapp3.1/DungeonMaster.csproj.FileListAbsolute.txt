@@ -9,3 +9,14 @@ C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\D
 C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.dll
 C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.pdb
 C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.csprojAssemblyReference.cache
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.exe
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.deps.json
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.runtimeconfig.json
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.runtimeconfig.dev.json
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.dll
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.pdb
+Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.csprojAssemblyReference.cache
+Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.AssemblyInfoInputs.cache
+Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.AssemblyInfo.cs
+Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.dll
+Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.pdb
