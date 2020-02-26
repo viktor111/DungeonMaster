@@ -19,28 +19,44 @@ namespace DungeonMaster
                 throw new Exception("Failed to connect to database!");
             }
 
+            Console.WriteLine("Use existing player: ");
+            string useExistingPlayer = Console.ReadLine();
 
-            Console.Write("Your name: ");
+            bool isUsingPlayer = false;
 
-            string name = Console.ReadLine();
-
-            Player player = new Player
+            if (useExistingPlayer == "yes")
             {
-                Name = name,
-                Health = 100,
-                Damage = 1,
-                Gold = 100
-            };
+                isUsingPlayer = true;
+            }
 
-            connection.Open();
-            String querry = "INSERT INTO dbo.Player(Name, Health, Damage, Gold) VALUES(@Name, @Health, @Damage, @Gold)";
-            SqlCommand command = new SqlCommand(querry, connection);
-            command.Parameters.AddWithValue("@Name", player.Name);
-            command.Parameters.AddWithValue("@Health", player.Health);
-            command.Parameters.AddWithValue("@Damage", player.Damage);
-            command.Parameters.AddWithValue("@Gold", player.Gold);
-            command.ExecuteNonQuery();
-            connection.Close();
+
+            Player player = new Player();
+
+            if (!isUsingPlayer)
+            {
+
+                Console.Write("Your name: ");
+
+                string name = Console.ReadLine();
+
+                player = new Player
+                {
+                    Name = name,
+                    Health = 100,
+                    Damage = 1,
+                    Gold = 100
+                };
+
+                player.save(connection, player);
+                Console.WriteLine("New player created!");
+            }
+            else
+            {
+                Console.Write("Player name: ");
+                string name = Console.ReadLine();
+
+                // ToDo use player that exists from databse.
+            }
 
             Shop shopClass = new Shop();
 
@@ -52,7 +68,17 @@ namespace DungeonMaster
 
                 switch (input)
                 {
-
+                    case "save":
+                        try
+                        {
+                            player.save(connection, player);
+                            Console.WriteLine("Player saved!");
+                        }
+                        catch
+                        {
+                            Console.WriteLine("User not saved due to error!");
+                        }
+                        break;
                     case "shop":
                         shopClass.displayShop(shopClass.counter());
                         break;
