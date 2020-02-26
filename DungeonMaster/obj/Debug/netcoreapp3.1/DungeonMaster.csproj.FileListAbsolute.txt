@@ -1,0 +1,11 @@
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.exe
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.deps.json
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.runtimeconfig.json
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.runtimeconfig.dev.json
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.dll
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\DungeonMaster.pdb
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.AssemblyInfoInputs.cache
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.AssemblyInfo.cs
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.dll
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.pdb
+C:\Users\User\Source\Repos\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.csprojAssemblyReference.cache
