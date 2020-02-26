@@ -13,6 +13,6 @@ namespace DungeonMaster
         public int Damage { get; set; }
 
         public int Gold { get; set; }
-
+       
     }
 }

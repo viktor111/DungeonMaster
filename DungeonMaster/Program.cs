@@ -12,45 +12,57 @@ namespace DungeonMaster
             try
             {
                 connection.Open();
+                connection.Close();
             }
             catch
             {
                 throw new Exception("Failed to connect to database!");
             }
 
-            using (connection)
+
+            Console.Write("Your name: ");
+
+            string name = Console.ReadLine();
+
+            Player player = new Player
             {
-                Console.Write("Your name: ");
+                Name = name,
+                Health = 100,
+                Damage = 1,
+                Gold = 100
+            };
 
-                string name = Console.ReadLine();
+            connection.Open();
+            String querry = "INSERT INTO dbo.Player(Name, Health, Damage, Gold) VALUES(@Name, @Health, @Damage, @Gold)";
+            SqlCommand command = new SqlCommand(querry, connection);
+            command.Parameters.AddWithValue("@Name", player.Name);
+            command.Parameters.AddWithValue("@Health", player.Health);
+            command.Parameters.AddWithValue("@Damage", player.Damage);
+            command.Parameters.AddWithValue("@Gold", player.Gold);
+            command.ExecuteNonQuery();
+            connection.Close();
 
-                Player player = new Player
+            Shop shopClass = new Shop();
+
+            bool gameLoop = true;
+
+            while (gameLoop)
+            {
+                string input = Console.ReadLine();
+
+                switch (input)
                 {
-                    Name = name,
-                    Health = 100,
-                    Damage = 1,
-                    Gold = 100
-                };
-                Shop shopClass = new Shop();
 
-                bool gameLoop = true;
-
-                while (gameLoop)
-                {
-                    string command = Console.ReadLine();
-
-                    switch (command)
-                    {
-                        case "shop":
-                            shopClass.displayShop(shopClass.counter());
-                            break;
-                        default:
-                            command = Console.ReadLine();
-                            break;
-                    }
-
+                    case "shop":
+                        shopClass.displayShop(shopClass.counter());
+                        break;
+                    default:
+                        input = Console.ReadLine();
+                        break;
                 }
+
             }
+
         }
     }
 }
