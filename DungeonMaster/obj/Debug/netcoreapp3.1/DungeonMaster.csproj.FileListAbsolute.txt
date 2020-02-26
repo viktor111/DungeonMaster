@@ -20,3 +20,10 @@ Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.AssemblyInf
 Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.AssemblyInfo.cs
 Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.dll
 Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.pdb
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+Z:\DungeonMaster\DungeonMaster\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+Z:\DungeonMaster\DungeonMaster\obj\Debug\netcoreapp3.1\DungeonMaster.csproj.CopyComplete

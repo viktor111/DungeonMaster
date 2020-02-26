@@ -6,18 +6,13 @@ namespace DungeonMaster
 {
     class Player
     {
-        public string name;
-        public int health;
-        public int damage;
-        public int gold;
+        public string Name { get; set; }
 
-        public Player(string name, int health, int damage, int gold)
-        {
-            this.name = name;
-            this.health = health;
-            this.damage = damage;
-            this.gold = gold;
-        }
+        public int Health { get; set; }
+
+        public int Damage { get; set; }
+
+        public int Gold { get; set; }
 
     }
 }

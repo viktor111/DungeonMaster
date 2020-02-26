@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 
 namespace DungeonMaster
 {
@@ -6,29 +7,49 @@ namespace DungeonMaster
     {
         static void Main(string[] args)
         {
-            Console.Write("Your name: ");     
+            var connection = new SqlConnection(@"Server=WINDEV2001EVAL\SQLEXPRESS;Database=DungeonMaster;Integrated Security=True");
 
-            string name = Console.ReadLine();
+            try
+            {
+                connection.Open();
+            }
+            catch
+            {
+                throw new Exception("Failed to connect to database!");
+            }
 
-            Player player = new Player(name, 100, 1, 0);
-            Shop shopClass = new Shop();
+            using (connection)
+            {
+                Console.Write("Your name: ");
 
-            bool gameLoop = true;
+                string name = Console.ReadLine();
 
-            while (gameLoop)
-            {               
-                string command = Console.ReadLine();
-
-                switch (command)
+                Player player = new Player
                 {
-                    case "shop":
-                       shopClass.displayShop(shopClass.counter());
-                        break;
-                    default:
-                        command = Console.ReadLine();
-                        break;
-                }
+                    Name = name,
+                    Health = 100,
+                    Damage = 1,
+                    Gold = 100
+                };
+                Shop shopClass = new Shop();
 
+                bool gameLoop = true;
+
+                while (gameLoop)
+                {
+                    string command = Console.ReadLine();
+
+                    switch (command)
+                    {
+                        case "shop":
+                            shopClass.displayShop(shopClass.counter());
+                            break;
+                        default:
+                            command = Console.ReadLine();
+                            break;
+                    }
+
+                }
             }
         }
     }
