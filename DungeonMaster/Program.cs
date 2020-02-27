@@ -19,20 +19,24 @@ namespace DungeonMaster
                 throw new Exception("Failed to connect to database!");
             }
 
-            Console.WriteLine("Use existing player: ");
-            string useExistingPlayer = Console.ReadLine();
+            Player player = new Player();
 
-            bool isUsingPlayer = false;
+            Console.WriteLine("Create new player: ");
+            Console.Write("yes/no: ");
+            string createOrNot = Console.ReadLine();
+            bool isCreate = false;
 
-            if (useExistingPlayer == "yes")
+            if (createOrNot == "yes")
             {
-                isUsingPlayer = true;
+                isCreate = true;
+            }
+            else if (createOrNot == "no")
+            {
+                isCreate = false;
             }
 
 
-            Player player = new Player();
-
-            if (!isUsingPlayer)
+            if (isCreate)
             {
 
                 Console.Write("Your name: ");
@@ -47,15 +51,16 @@ namespace DungeonMaster
                     Gold = 100
                 };
 
-                player.save(connection, player);
+                player.addNewPlayer(connection, player);
                 Console.WriteLine("New player created!");
             }
-            else
-            {
-                Console.Write("Player name: ");
-                string name = Console.ReadLine();
 
-                // ToDo use player that exists from databse.
+            if (!isCreate)
+            {
+                Console.Write("Name of exisitng player: ");
+                string name = Console.ReadLine();
+                var existingPLayer = player.getExisitngPLayer(connection, player, name);
+                player = existingPLayer;
             }
 
             Shop shopClass = new Shop();
@@ -68,6 +73,9 @@ namespace DungeonMaster
 
                 switch (input)
                 {
+                    case "stats":
+                        player.checkData(connection, player.Name);
+                        break;
                     case "save":
                         try
                         {
@@ -81,6 +89,8 @@ namespace DungeonMaster
                         break;
                     case "shop":
                         shopClass.displayShop(shopClass.counter());
+                        Console.WriteLine(player.Name);
+                        Console.WriteLine(player.Health);
                         break;
                     default:
                         input = Console.ReadLine();
