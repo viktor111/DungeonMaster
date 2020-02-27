@@ -65,9 +65,21 @@ namespace DungeonMaster
 
         }
 
-        public void upgradeDamage(Player player)
+        public void upgradeDamage(Player player ,Dictionary<int,Dictionary<int,int>> shop)
         {
-            
+            List<int> options = new List<int>();
+
+            foreach (var item in shop)
+            {
+                var option = item.Key;
+                options.Add(option);
+            }
+
+            Console.Write("Option: ");
+            string optionInput = Console.ReadLine();
+
+            //ToDo add shop option logic(update player damage based on option chosen)
+
         }
 
     }
