@@ -69,10 +69,11 @@ namespace DungeonMaster
 
             while (gameLoop)
             {
+                Console.Write("Activity: ");
                 string input = Console.ReadLine();
 
                 switch (input)
-                {
+                {                    
                     case "stats":
                         player.checkData(connection, player.Name);
                         break;
@@ -89,8 +90,6 @@ namespace DungeonMaster
                         break;
                     case "shop":
                         shopClass.displayShop(shopClass.counter());
-                        Console.WriteLine(player.Name);
-                        Console.WriteLine(player.Health);
                         break;
                     default:
                         input = Console.ReadLine();

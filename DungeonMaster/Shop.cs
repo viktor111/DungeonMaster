@@ -48,7 +48,6 @@ namespace DungeonMaster
         public void displayShop(Dictionary<int ,Dictionary<int,int>> shop) 
         {
             
-
             foreach (var item in shop)
             {
                 var option = item.Key;
@@ -64,6 +63,11 @@ namespace DungeonMaster
                 
             }
 
+        }
+
+        public void upgradeDamage(Player player)
+        {
+            
         }
 
     }
