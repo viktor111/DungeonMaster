@@ -73,8 +73,16 @@ namespace DungeonMaster
                 string input = Console.ReadLine();
 
                 switch (input)
-                {         
-                    //ToDo add input to choose shop options
+                {
+                    case "help":
+                        Console.WriteLine("");
+                        break;
+                    case "buy":
+                        string option = Console.ReadLine();
+                        var counter = shopClass.counter();
+                        Console.Write("Which option would you like: ");
+                        shopClass.upgradeDamage(player, counter, option);
+                        break;
                     case "stats":
                         player.checkData(connection, player.Name);
                         break;
